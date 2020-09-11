@@ -4,28 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/coordinatorLayout"
+    tools:context=".MainActivity"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_anchorGravity="center">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:minHeight="?actionBarSize"
-            android:padding="@dimen/appbar_padding"
-            android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/app_name_short"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                app:layout_constraintBottom_toTopOf="@+id/tabs"
+                app:layout_constraintEnd_toStartOf="@+id/submitButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/submitButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/submit_button_hieght"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@drawable/shape_rounded_button"
+                android:lineSpacingExtra="36sp"
+                android:paddingLeft="@dimen/submit_button_padding_x"
+                android:paddingTop="@dimen/submit_button_padding_y"
+                android:paddingRight="@dimen/submit_button_padding_x"
+                android:paddingBottom="@dimen/submit_button_padding_y"
+                android:text="@string/submit_button_text"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -34,11 +75,4 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

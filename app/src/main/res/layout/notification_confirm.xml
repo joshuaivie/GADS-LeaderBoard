@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:background="@drawable/shape_dialog_background"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/cancelButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_cancel_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="7dp"
+        />
+    <TextView
+        android:id="@+id/confirmationQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_toRightOf="@id/confirmationQuestion"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="4dp"
+        android:textSize="35sp"
+        />
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/confirmationQuestion"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_danger_outline"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp"
+        android:text="Yes"
+        />
+
+
+
+</RelativeLayout>

@@ -2,7 +2,13 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="half_activity_margin">8dp</dimen>
     <dimen name="appbar_padding">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="submit_button_padding_x">48dp</dimen>
+    <dimen name="submit_button_padding_y">0dp</dimen>
+    <dimen name="standard_corner_radius">8dp</dimen>
+    <dimen name="submit_button_radius">24dp</dimen>
+    <dimen name="submit_button_hieght">28dp</dimen>
 </resources>
